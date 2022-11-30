@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ECHO "Hello from Bash!"
