@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 // helpers
-function commaSeparatedList(value, dummyPrevious) {
+function commaSeparatedList(value) {
   return value.split(',');
 }
 
-const { program } = require('commander');
+import { program } from 'commander';
 
 program
   .argument('<recipient>', 'who is eating the pizza')
@@ -20,9 +20,9 @@ program
 program.parse(process.argv);
 
 const options = program.opts();
-const arguments = program.args;
+const args = program.args;
 
-console.log(`Pizza for ${arguments[0]}!`);
+console.log(`Pizza for ${args[0]}!`);
 console.log(`Size: ${options.pizzaSize}`);
 console.log(options.stuffedCrust ? 'Crust is stuffed' : 'Crust is not stuffed');
 if (options.toppingsCommaSeparated) {

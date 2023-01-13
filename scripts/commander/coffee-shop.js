@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
-const commander = require('commander');
-const commands = require('./coffee-shop-ops-lib');
+import { Command } from 'commander';
+import commands from './coffee-shop-ops-lib.js';
 
-const program = new commander.Command();
+const program = new Command();
 
 // Commander supports nested subcommands.
 // .command() can add a subcommand with an action handler or an executable.
@@ -14,3 +14,7 @@ commands.forEach(c => {
 });
 
 program.parse(process.argv);
+
+// Example commands
+// yarn coffee-shop --help
+// yarn coffee-shop

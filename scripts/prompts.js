@@ -1,6 +1,6 @@
 // adapted from https://github.com/terkelg/prompts/blob/master/example.js
 
-const { prompt } = require('prompts');
+import prompt from 'prompts';
 
 let interval;
 

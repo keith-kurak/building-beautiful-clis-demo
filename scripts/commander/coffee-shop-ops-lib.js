@@ -1,4 +1,4 @@
-const commander = require("commander");
+import { Command } from 'commander';
 
 // unit-testable "libraries"
 class BrewCoffeeService {
@@ -44,7 +44,7 @@ class BakeCupcakesService {
 
 // bind libs to commands
 
-const brew = new commander.Command("brew");
+const brew = new Command("brew");
 
 brew
   .command("tea")
@@ -61,7 +61,7 @@ brew
 
 // bake lib
 
-const bake = new commander.Command("bake");
+const bake = new Command("bake");
 
 bake
   .command("scones")
@@ -75,4 +75,4 @@ bake.command("cupcakes").action((options) => {
 
 const commands = [brew, bake];
 
-module.exports = commands;
+export default commands;

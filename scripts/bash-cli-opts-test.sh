@@ -1,5 +1,21 @@
 #!/bin/bash
 
+print_usage () {
+    echo "Usage:"
+    echo "  optstest [-a aparam] [-b bparam] [-c cparam]"
+    echo
+    echo "Options:"
+    echo "  -a, --aparam APARAM        Sets the A parameter"
+    echo "  -b, --bparam APARAM        Sets the B parameter"
+    echo "  -c, --cparam CPARAM        Sets the C parameter"
+ }
+
+# only needed if at least one parameter is required
+if [ "$1" = "" ]; then
+ print_usage
+ exit 1
+fi
+
 # while slot 1 is not empty
 while test -n "$1"; do
     case "$1" in
@@ -16,13 +32,7 @@ while test -n "$1"; do
           shift 2
           ;;
       -h|--help)
-          echo "Usage:"
-          echo "  optstest [-a aparam] [-b bparam] [-c cparam]"
-          echo
-          echo "Options:"
-          echo "  -a, --aparam APARAM        Sets the A parameter"
-          echo "  -b, --bparam APARAM        Sets the B parameter"
-          echo "  -c, --cparam CPARAM        Sets the C parameter"
+          print_usage
           exit 0
           ;;
       -?*)
