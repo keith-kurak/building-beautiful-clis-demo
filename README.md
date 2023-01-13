@@ -1,4 +1,4 @@
-# building-beautiful-clis-demo
+# Building Beautiful CLI's is for Everyone
 
 Sample code in scripts folder!
 
