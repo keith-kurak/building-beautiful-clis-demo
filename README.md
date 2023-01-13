@@ -1,13 +1,7 @@
 # building-beautiful-clis-demo
 
-## Topics / sample code
-### Running out of bin
-```
-"bin": {
-    "eas": "./bin/run"
-  },
-```
+Sample code in scripts folder!
 
-```
-chmod + x ./bin/run
-```
+[https://docs.google.com/presentation/d/1S9_uQOZ_PP0l5ilqXdFG9LMBNLXSqM_YcnUVG8JyveU/edit?usp=sharing](Link to presentation)
+
+If you like nice CLI's, [go star the Expo github repo](https://github.com/expo/expo).
